@@ -5,9 +5,9 @@
 ./compare.sh -p FOLDER1 FOLDER2
 
 ## Examples
-Ex (Relative paths): ./compare.sh -p 'Folder1' 'Folder (2)'
+Example 1: (Relative paths): ./compare.sh -p 'Folder1' 'Folder (2)'
 
-Ex (Absolute & relative paths): ./compare.sh -p ~/Documents/GitHub/MD5Er/Folder1 '/home/binbasher/Documents/GitHub/MD5Er/Folder (2)'
+Example 2: (Absolute & relative paths): ./compare.sh -p ~/Documents/GitHub/MD5Er/Folder1 '/home/binbasher/Documents/GitHub/MD5Er/Folder (2)'
 
 
 # Files
