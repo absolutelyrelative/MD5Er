@@ -40,7 +40,6 @@ for((CTR1=0; CTR1 < ${CTR_f1}; CTR1++)){
 
 	read -r line
 	#Make sure spaces in filenames don't break the code. Unfortunately this won't work with files or folder with '=' in them. Thank you, openssl developers.
-	# I'm essentially fixing _your_ lack of output coherency.
 	MD5_CTR1=$( echo "$line" | cut -d'=' -f2 | cut -d' ' -f2 ) 
 	for((CTR2=0; CTR2 < ${CTR_f2}; CTR2++)){
 		read -r line2
@@ -48,8 +47,11 @@ for((CTR1=0; CTR1 < ${CTR_f1}; CTR1++)){
 
 		if [ ${MD5_CTR1} == ${MD5_CTR2} ]
 		then
-			echo "Found one!" $line $line2
+			#I separated these two lines with tabulator to make sure they can be *properly* formatted.
+			echo "$line	matches	with	$line2"
+			echo $line	=	$line2 >> matching.txt
 		fi
 	} < ${f_o_2}
 } < ${f_o_1}
 
+echo "Done. Check matching.txt"
