@@ -1,0 +1,4 @@
+MD5(Folder1/Untitled Document 1)= 55960eb9db1f96c06984b5bc7278fb58
+MD5(Folder1/4.bin)= 34d20f2ede4372a7f8a8be96d64b7366
+MD5(Folder1/2)= 3a8f74a0071aa75ab44ba9abaf8f92bb
+MD5(Folder1/3.txt)= a51e02a60dd4db46e2f7e9c25353564c
