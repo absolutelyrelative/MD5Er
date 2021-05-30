@@ -40,10 +40,10 @@ for((CTR1=0; CTR1 < ${CTR_f1}; CTR1++)){
 
 	read -r line
 	#Make sure spaces in filenames don't break the code. Unfortunately this won't work with files or folder with '=' in them. Thank you, openssl developers.
-	MD5_CTR1=$( echo "$line" | cut -d'=' -f2 | cut -d' ' -f2 ) 
+	MD5_CTR1=$( echo "$line" | rev | cut -d'=' -f1 | tr -d ' ' | rev )
 	for((CTR2=0; CTR2 < ${CTR_f2}; CTR2++)){
 		read -r line2
-		MD5_CTR2=$( echo "$line2" | cut -d'=' -f2 | cut -d' ' -f2 )
+		MD5_CTR2=$( echo "$line2" | rev | cut -d'=' -f1 | tr -d ' ' | rev )
 
 		if [ ${MD5_CTR1} == ${MD5_CTR2} ]
 		then
