@@ -14,10 +14,3 @@ Example 2: (Absolute & relative paths): ./compare.sh -p ~/Documents/GitHub/MD5Er
 compare.sh : Main script file: launch eval_launcher -> eval, move duplicates.
 eval_launcher.sh : Find files & execute md5 evaluation script.
 eval.sh : Execute md5 evaluation script, used by eval_launcher.sh.
-
-
-# Known issues
-Tested on PopOS.
-Because the openssl command does not permit (at least on my machine) to format the output and thus not be subject to folder naming shenanigans,
-having folders or files with "=" in them will probably break the script. You can modify this behaviour, but be warned that any character you change
-will have to not be present in the input file/folders.
